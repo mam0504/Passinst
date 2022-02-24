@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Генератор паролей")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Andrew Mezhlumov")]
-[assembly: AssemblyProduct("Генератор пародей")]
+[assembly: AssemblyProduct("Генератор паролей")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

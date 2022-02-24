@@ -12,9 +12,20 @@ namespace Passinst
 {
     public partial class AboutForm : Form
     {
+        
+
         public AboutForm()
         {
             InitializeComponent();
+            string ver = Application.ProductVersion;
+            
+            label1.Text = "Password generation program v "+ver;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
+
 }

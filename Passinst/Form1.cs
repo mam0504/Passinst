@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
+using System.Reflection.Emit;
 
 namespace Passinst
 {
@@ -11,11 +12,11 @@ namespace Passinst
         {
             InitializeComponent();
             
-            
         }
 
         private bool State;
         private string ver;
+
         private void Form1_Load(object sender, EventArgs e)
         {
             ver = Assembly.GetExecutingAssembly().GetName().Version.ToString();
@@ -71,15 +72,23 @@ namespace Passinst
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             if(textBox1.Text == "")
             {
                 MessageBox.Show("Текстовое поле не должно быть пустым !");
             } else
             {
+                saveFileDialog1.CreatePrompt = true;
+                saveFileDialog1.OverwritePrompt = true;
+                
                 saveFileDialog1.Filter = "Text files (*.txt) | *.txt";
+                
                 saveFileDialog1.FileName = "passwords";
+                saveFileDialog1.DefaultExt = "txt";
+
+
                 DialogResult result = saveFileDialog1.ShowDialog();
-                if(result == DialogResult.OK)
+                if (result == DialogResult.OK)
                 {
                     using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName, true))
                     {
@@ -92,10 +101,8 @@ namespace Passinst
 
         private void AboutBtn_Click(object sender, EventArgs e)
         {
-            string allString = "Генератор паролей версия 1.0.0.1\n";
-            string aboutString = "Написано Андреем Межлумовым\n";
-            string addrString = "По своим откликам о работе с данной программой просьба писать:\n amezhlumov@mail.ru";
-            MessageBox.Show(allString + aboutString + addrString);
+            AboutForm about = new AboutForm();
+            about.Show();
         }
     }
 }
