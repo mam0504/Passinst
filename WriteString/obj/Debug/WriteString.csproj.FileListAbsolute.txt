@@ -1,0 +1,5 @@
+C:\Users\Андрей\source\repos\Passinst\WriteString\bin\Debug\WriteString.dll
+C:\Users\Андрей\source\repos\Passinst\WriteString\bin\Debug\WriteString.pdb
+C:\Users\Андрей\source\repos\Passinst\WriteString\obj\Debug\WriteString.csproj.CoreCompileInputs.cache
+C:\Users\Андрей\source\repos\Passinst\WriteString\obj\Debug\WriteString.dll
+C:\Users\Андрей\source\repos\Passinst\WriteString\obj\Debug\WriteString.pdb

@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
 using System.Reflection.Emit;
+using WriteString;
 
 namespace Passinst
 {
@@ -38,7 +39,7 @@ namespace Passinst
 
         private void button1_Click(object sender, EventArgs e)
         {
-            WriteString str = new WriteString();
+            ReadMyString str = new ReadMyString();
             int num = Convert.ToInt16(numericUpDown1.Value);
             string Str;
             if(num != 0)
